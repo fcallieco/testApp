@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
-        <script type="text/javascript" src="geolocation.js" ></script>
-        <script type="text/javascript" src="mainApp.js" ></script>
+        <script type="text/javascript" src="geolocation.js"></script>
+        <script type="text/javascript" src="mainApp.js"></script>
+        <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
         <title></title>
+        <script type="text/javascript">
+            if(localStorage.getItem('statoAttuale') == null)
+                window.location = 'istruzioni.html';
+        </script>
     </head>
-    <body onload="CheckStatus()">
-        <button onclick="checkPosition()">Click me</button>
+    <body onload="checkStatus()">
+        <div id="img">
+        <div id="main">
+            <button class="round-button" id="btn" onclick="checkPosition()">OK</button>
+        </div></div>
     </body>
 </html>
